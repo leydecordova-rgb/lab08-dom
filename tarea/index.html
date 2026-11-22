@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Películas por Ver</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 600px; margin: 2rem auto; padding: 0 1rem; }
+    form { display: flex; gap: 0.5rem; margin-bottom: 1.5rem; }
+    input, select, button { padding: 0.5rem; font-size: 1rem; }
+    input { flex: 1; }
+    ul { list-style: none; padding: 0; }
+    li { display: flex; justify-content: space-between; align-items: center; padding: 0.75rem; border: 1px solid #ddd; margin-bottom: 0.5rem; border-radius: 6px; }
+    .vista { text-decoration: line-through; color: #777; background-color: #f9f9f9; }
+    .acciones { display: flex; gap: 0.5rem; }
+    .btn-estado { background: #e0f2fe; border: 1px solid #7dd3fc; cursor: pointer; border-radius: 4px; }
+    .btn-borrar { background: #fee2e2; border: 1px solid #fca5a5; cursor: pointer; border-radius: 4px; }
+  </style>
+</head>
+<body>
+  <h1>Películas por Ver</h1>
+
+  <form id="form-pelicula">
+    <input type="text" id="titulo" placeholder="Título de la película" required>
+    <select id="genero">
+      <option value="Acción">Acción</option>
+      <option value="Ciencia Ficción">Ciencia Ficción</option>
+      <option value="Comedia">Comedia</option>
+      <option value="Drama">Drama</option>
+    </select>
+    <button type="submit">Agregar</button>
+  </form>
+
+  <ul id="lista-peliculas"></ul>
+
+  <script src="app.js"></script>
+</body>
+</html>
